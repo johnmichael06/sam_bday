@@ -1,0 +1,193 @@
+:root {
+  --purple: #8200a8;
+  --lavender: #d185e7;
+  --mustard: #d2a43d;
+  --cream: #f6e5bb;
+  --rose: #d66e6e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1, h2, p {
+  color: #fff;
+}
+
+#qna h2{
+
+    font-size: large;
+
+}
+
+#welcome { background: var(--purple); }
+#qna { background: var(--lavender); }
+#minigame { background: var(--mustard); }
+#speaknow { background: var(--cream); color: #333; }
+#message { background: var(--rose); }
+#sure{background-color: #d66e6e;}
+
+#speaknow h2  {
+
+    color: var(--purple);
+    margin-bottom: 20px;
+}
+
+/* Q&A Styling */
+#qna input, #qna button {
+  margin: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+
+.custom-audio-player {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.custom-audio-player button {
+  background-color: #d4a73e;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.custom-audio-player input[type="range"] {
+  flex: 1;
+  accent-color: #e56b6f;
+}
+
+
+#qna input {
+  width: 300px;
+  max-width: 90%;
+}
+
+#qna button {
+  background-color: #d4a73e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#qna h1{
+
+    margin-bottom: 20px;
+}
+
+#qna button:hover {
+  background-color: #e56b6f;
+}
+
+#quiz-feedback {
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Memory Game */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 140px;
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.card.matched {
+  background-color: #d2a43d;
+}
+
+/* Mouse trail */
+.trail {
+  position: fixed;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: white;
+  pointer-events: none;
+  animation: fade 1s forwards;
+}
+
+@keyframes fade {
+  to { opacity: 0; transform: scale(2); }
+}
+
+#moves{
+
+    margin-top: 20px;
+}
+
+
+#last button{
+
+
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+        color: white;
+        background-color: #d4a73e;
+        cursor: pointer;
+
+
+
+}
+
+#last button:hover{
+
+
+      color: white;
+        background-color: var(--purple);
+        
+
+
+}
