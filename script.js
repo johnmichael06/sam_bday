@@ -1,4 +1,3 @@
-// Mouse trail effect
 window.addEventListener("mousemove", function (e) {
   const trail = document.createElement("div");
   trail.className = "trail";
@@ -7,7 +6,6 @@ window.addEventListener("mousemove", function (e) {
   document.body.appendChild(trail);
   setTimeout(() => document.body.removeChild(trail), 1000);
 });
-
 
 window.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("audio");
@@ -26,17 +24,15 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-audio.addEventListener("loadedmetadata", () => {
-  const duration = formatTime(audio.duration);
-  durationEl.textContent = `/ ${duration}`;
-});
+  audio.addEventListener("loadedmetadata", () => {
+    const duration = formatTime(audio.duration);
+    durationEl.textContent = `/ ${duration}`;
+  });
 
-
-audio.addEventListener("timeupdate", () => {
-  currentTimeEl.textContent = formatTime(audio.currentTime);
-  seekBar.value = (audio.currentTime / audio.duration) * 100;
-});
-
+  audio.addEventListener("timeupdate", () => {
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    seekBar.value = (audio.currentTime / audio.duration) * 100;
+  });
 
   seekBar.addEventListener("input", () => {
     audio.currentTime = (seekBar.value / 100) * audio.duration;
@@ -44,21 +40,23 @@ audio.addEventListener("timeupdate", () => {
 
   function formatTime(time) {
     const mins = Math.floor(time / 60);
-    const secs = Math.floor(time % 60).toString().padStart(2, '0');
+    const secs = Math.floor(time % 60)
+      .toString()
+      .padStart(2, "0");
     return `${mins}:${secs}`;
   }
 });
 
-
-
 window.addEventListener("DOMContentLoaded", () => {
-  // 🎯 Memory Game
   const emojis = ["💜", "💜", "💛", "💛", "🎂", "🎂", "🎶", "🎶"];
   const shuffled = [...emojis].sort(() => 0.5 - Math.random());
   const board = document.getElementById("game-board");
   const movesText = document.getElementById("moves");
 
-  let first = null, second = null, lock = false, moves = 0;
+  let first = null,
+    second = null,
+    lock = false,
+    moves = 0;
 
   function reset() {
     [first, second, lock] = [null, null, false];
@@ -104,33 +102,33 @@ window.addEventListener("DOMContentLoaded", () => {
     board.appendChild(card);
   });
 
-  // 🧠 Q&A Quiz
   const quiz = [
     {
       question: "When ka gipanganak?",
       answer: "June 15, 2004",
-      clue: "Answer in complete sentence nissa, e.g 'January 6, 2004' kuha?"
+      clue: "Answer in complete sentence nissa, e.g 'January 6, 2004' kuha?",
     },
     {
       question: "Finish the lyric: 'I had the time of my life...'",
       answer: "fighting dragons with you",
-      clue: "wow, i'm disappointed."
+      clue: "wow, i'm disappointed.",
     },
     {
       question: "What is your favorite color?",
       answer: "Purple",
-      clue: "Bahala ka oy"
+      clue: "Bahala ka oy",
     },
     {
       question: "Des-",
       answer: "Destiny",
-      clue: "HAY NAKO!"
+      clue: "HAY NAKO!",
     },
     {
-      question: "Syrempre kay bday nimo, unsa akong favorite song sa Folklore? HAHAHAHA",
+      question:
+        "Syrempre kay bday nimo, unsa akong favorite song sa Folklore? HAHAHAHA",
       answer: "Speak Now",
-      clue: "Joke, imoha diay fav song sa Speak Now"
-    }
+      clue: "Joke, imoha diay fav song sa Speak Now",
+    },
   ];
 
   let current = 0;

@@ -12,11 +12,12 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 section {
@@ -29,31 +30,44 @@ section {
   padding: 2rem;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   color: #fff;
 }
 
-#qna h2{
-
-    font-size: large;
-
+#qna h2 {
+  font-size: large;
 }
 
-#welcome { background: var(--purple); }
-#qna { background: var(--lavender); }
-#minigame { background: var(--mustard); }
-#speaknow { background: var(--cream); color: #333; }
-#message { background: var(--rose); }
-#sure{background-color: #d66e6e;}
+#welcome {
+  background: var(--purple);
+}
+#qna {
+  background: var(--lavender);
+}
+#minigame {
+  background: var(--mustard);
+}
+#speaknow {
+  background: var(--cream);
+  color: #333;
+}
+#message {
+  background: var(--rose);
+}
+#sure {
+  background-color: #d66e6e;
+}
 
-#speaknow h2  {
-
-    color: var(--purple);
-    margin-bottom: 20px;
+#speaknow h2 {
+  color: var(--purple);
+  margin-bottom: 20px;
 }
 
 /* Q&A Styling */
-#qna input, #qna button {
+#qna input,
+#qna button {
   margin: 0.5rem;
   padding: 0.75rem 1rem;
   font-size: 1rem;
@@ -61,7 +75,6 @@ h1, h2, p {
   border: none;
   outline: none;
 }
-
 
 .custom-audio-player {
   background: #fff;
@@ -90,7 +103,6 @@ h1, h2, p {
   accent-color: #e56b6f;
 }
 
-
 #qna input {
   width: 300px;
   max-width: 90%;
@@ -103,9 +115,8 @@ h1, h2, p {
   cursor: pointer;
 }
 
-#qna h1{
-
-    margin-bottom: 20px;
+#qna h1 {
+  margin-bottom: 20px;
 }
 
 #qna button:hover {
@@ -157,37 +168,28 @@ h1, h2, p {
 }
 
 @keyframes fade {
-  to { opacity: 0; transform: scale(2); }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 
-#moves{
-
-    margin-top: 20px;
+#moves {
+  margin-top: 20px;
 }
 
-
-#last button{
-
-
-        height: 50px;
-        width: 200px;
-        border-radius: 10px;
-        border: none;
-        font-weight: 700;
-        color: white;
-        background-color: #d4a73e;
-        cursor: pointer;
-
-
-
+#last button {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  background-color: #d4a73e;
+  cursor: pointer;
 }
 
-#last button:hover{
-
-
-      color: white;
-        background-color: var(--purple);
-        
-
-
+#last button:hover {
+  color: white;
+  background-color: var(--purple);
 }
